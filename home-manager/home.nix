@@ -58,7 +58,5 @@
 
   xdg.configFile."nvim".source = ./nvim;
 
-  home-manager.backupFileExtension = "backup";
-
   programs.home-manager.enable = true;
 }
