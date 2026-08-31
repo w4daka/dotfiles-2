@@ -52,6 +52,7 @@
     eza
     vim-startuptime
     gh
+    neovim
 
     # dev
     nixd
