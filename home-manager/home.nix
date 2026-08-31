@@ -17,7 +17,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs;[
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -34,6 +34,47 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    nixfmt
+        # shell
+    starship
+    zoxide
+    fzf
+    sheldon
+
+    # cli
+    ripgrep
+    fd
+    jq
+    lazygit
+    ghq
+    lazydocker
+    devcontainer
+    eza
+    vim-startuptime
+    gh
+
+    # dev
+    nixd
+    nixfmt
+    bat
+    direnv
+    nix-direnv
+    repomix
+    uv
+    clang-tools
+    just
+
+    # lua
+    lua-language-server
+    stylua
+    luaPackages.luacheck
+
+    # runtime
+    deno
+
+    # formatter
+    prettierd
+
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
