@@ -39,6 +39,7 @@
     zoxide
     fzf
     sheldon
+    git
 
     # cli
     ripgrep
