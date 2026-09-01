@@ -10,12 +10,12 @@ return { -- Collection of various small independent plugins/modules
         return arg == nil or arg == ''
       end
       local function get_sessions(lead)
-        local dir = session.config.dir
+        local dir = MiniSessions.config.directory
         if not dir then
           return {}
         end
         return vim
-          .iter(vim.fs.dir(session.config.dir))
+          .iter(vim.fs.dir(MiniSessions.config.directory))
           :map(function(v)
             local name = vim.fs.basename(v)
             return vim.startswith(name, lead) and name or nil
@@ -85,7 +85,6 @@ return { -- Collection of various small independent plugins/modules
       end, { desc = 'Zoom current buffer' })
       vim.keymap.set('n', 'mz', '<cmd>Zoom<cr>', { desc = '[Z]oom current buffer' })
       -- 2. その他の mini モジュールの設定
-      require('mini.ai').setup({ n_lines = 500 })
       require('mini.surround').setup()
       require('mini.pairs').setup()
       require('mini.indentscope').setup()
@@ -98,6 +97,7 @@ return { -- Collection of various small independent plugins/modules
       end, { desc = 'Trim trailing space and last blank lines' })
       local gen_ai_spec = require('mini.extra').gen_ai_spec
       require('mini.ai').setup({
+        n_lines = 500,
         custom_textobjects = {
           B = gen_ai_spec.buffer(),
           D = gen_ai_spec.diagnostic(),
