@@ -58,12 +58,12 @@ return {
             ['@parameter.outer'] = 'v', -- charwise
             ['@function.outer'] = 'V', -- linewise
           },
+          include_surrounding_whitespace = false,
         },
 
         move = {
           set_jumps = true,
         },
-        include_surrounding_whitespace = false,
       })
 
       -- You can use the capture groups defined in `textobjects.scm`
