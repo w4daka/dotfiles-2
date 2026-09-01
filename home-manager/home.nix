@@ -38,6 +38,7 @@
     uv
     clang-tools
     just
+    lldb-dap
 
     lua-language-server
     stylua
