@@ -23,13 +23,15 @@ return { -- Collection of various small independent plugins/modules
           :totable()
       end
       vim.api.nvim_create_user_command('SessionWrite', function(arg)
-        local session_name = is_blank(arg.args) and vim.v.this_session or arg.args
-        if is_blank(session_name) then
+        if is_blank(arg.args) ~= nil then
+          session.write(arg.args)
+          return
+        elseif is_blank(vim.v.this_session) == nil then
           vim.notify('Session name is required', vim.log.levels.WARN)
           return
+        else
+          session.write(nil)
         end
-        vim.cmd('%argdelete')
-        session.write(session_name)
       end, { desc = 'Write session', nargs = '?', complete = get_sessions })
       vim.api.nvim_create_user_command('SessionRead', function()
         session.select('read', { verbose = true })
