@@ -72,21 +72,19 @@ vim.lsp.config('ts_ls', {
   },
 })
 vim.lsp.config('nixd', {
-  {
-    settings = {
-      nixd = {
-        nixpkgs = {
-          -- 補完を有効にするための設定
-          expr = 'import <nixpkgs> { }',
-        },
-        formatting = {
-          command = { 'nixfmt' }, -- 先ほど flake.nix に入れた nixfmt-rfc-style を使う
-        },
-        options = {
-          -- NixOSの設定やFlakeのオプションも補完したい場合はここに追加
-          nixos = {
-            expr = '(attributes)._module.args.options',
-          },
+  settings = {
+    nixd = {
+      nixpkgs = {
+        -- 補完を有効にするための設定
+        expr = 'import <nixpkgs> { }',
+      },
+      formatting = {
+        command = { 'nixfmt' }, -- 先ほど flake.nix に入れた nixfmt-rfc-style を使う
+      },
+      options = {
+        -- NixOSの設定やFlakeのオプションも補完したい場合はここに追加
+        nixos = {
+          expr = '(attributes)._module.args.options',
         },
       },
     },
