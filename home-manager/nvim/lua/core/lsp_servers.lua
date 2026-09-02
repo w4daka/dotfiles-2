@@ -86,7 +86,10 @@ vim.lsp.config('nixd', {
       options = {
         -- NixOSの設定やFlakeのオプションも補完したい場合はここに追加
         nixos = {
-          expr = '(attributes)._module.args.options',
+          expr = string.format(
+            'builtins.getFlake (builtins.toString "%s")).homeConfigurations."w4daka".options',
+            flake_root
+          ),
         },
       },
     },
