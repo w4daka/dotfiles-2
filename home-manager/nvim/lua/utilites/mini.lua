@@ -16,6 +16,9 @@ return { -- Collection of various small independent plugins/modules
         end
         return vim
           .iter(vim.fs.dir(MiniSessions.config.directory))
+          :filter(function(_, type)
+            return type ~= 'directory'
+          end)
           :map(function(v)
             local name = vim.fs.basename(v)
             return vim.startswith(name, lead) and name or nil
