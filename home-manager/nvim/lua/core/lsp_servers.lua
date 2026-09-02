@@ -76,7 +76,7 @@ vim.lsp.config('nixd', {
     nixd = {
       nixpkgs = {
         -- 補完を有効にするための設定
-        expr = 'import <nixpkgs> { }',
+        expr = 'import (builtins.getFlake "/home/w4daka/projects/github.com/w4daka/dotfiles-2")input.nixpkgs{ }',
       },
       formatting = {
         command = { 'nixfmt' }, -- 先ほど flake.nix に入れた nixfmt-rfc-style を使う
