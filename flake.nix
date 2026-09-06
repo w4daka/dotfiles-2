@@ -10,6 +10,7 @@
     };
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    markdown-reader.url = "github:leboiko/markdown-reader";
   };
 
   outputs =
