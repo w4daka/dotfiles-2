@@ -4,6 +4,9 @@
   inputs,
   ...
 }:
+let
+  markdown-reader = pkgs.callPackage ./packages/markdown-reader.nix { };
+in
 {
   home.username = "w4daka";
   home.homeDirectory = "/home/w4daka";
@@ -45,10 +48,7 @@
 
     deno
     prettierd
-    callPackage
-    packages/markdown-reader.nix
-    { }
-
+    markdown-reader
   ];
 
   programs.neovim = {
