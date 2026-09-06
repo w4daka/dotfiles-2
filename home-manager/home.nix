@@ -5,7 +5,7 @@
   ...
 }:
 let
-  markdown-render = pkgs.callPackge ./packages/markdown-render.nix { };
+  markdown-render = callPackage ./packages/markdown-render.nix { };
 in
 {
   home.username = "w4daka";
