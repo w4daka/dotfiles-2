@@ -7,7 +7,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "markdown-reader";
-  version = "1.35.1";
+  version = "master";
 
   src = fetchFromGitHub {
     owner = "leboiko";
