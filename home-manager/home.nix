@@ -39,6 +39,7 @@
     clang-tools
     just
     lldb
+    markdown-render
 
     lua-language-server
     stylua
