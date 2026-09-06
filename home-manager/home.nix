@@ -39,7 +39,6 @@
     clang-tools
     just
     lldb
-    markdown-render
 
     lua-language-server
     stylua
@@ -52,6 +51,10 @@
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  };
+  programs.markdown-render = {
+    enable = true;
+    package = inputs.markdown-render.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 
   home.file = {
