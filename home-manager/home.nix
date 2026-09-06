@@ -4,9 +4,6 @@
   inputs,
   ...
 }:
-let
-  markdown-render = callPackage ./packages/markdown-render.nix { };
-in
 {
   home.username = "w4daka";
   home.homeDirectory = "/home/w4daka";
@@ -48,7 +45,10 @@ in
 
     deno
     prettierd
-    markdown-render
+    callPackage
+    packages/markdown-reader.nix
+    { }
+
   ];
 
   programs.neovim = {
