@@ -4,7 +4,9 @@
   inputs,
   ...
 }:
-
+let
+  markdown-render = pkgs.callPackge ./packages/markdown-render.nix { };
+in
 {
   home.username = "w4daka";
   home.homeDirectory = "/home/w4daka";
@@ -46,6 +48,7 @@
 
     deno
     prettierd
+    markdown-render
   ];
 
   programs.neovim = {
