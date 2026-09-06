@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage {
     owner = "leboiko";
     repo = "markdown-reader";
     rev = "186698caba1f6c4f9932296da03c5599b35408d0";
-    hash = lib.fakeHash;
+    hash = "x5aobkVwfXEi71kB6utwyIXrSXRSYTGqqf4ZxKSEpxI";
   };
 
   cargoHash = lib.fakeHash;
