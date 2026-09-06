@@ -5,7 +5,7 @@
   ...
 }:
 let
-  markdown-reader = pkgs.callPackage ./packages/markdown-reader.nix { };
+  markdown-reader = pkgs.callPackage ./packages/markdwon-reader/markdown-reader.nix { };
 in
 {
   home.username = "w4daka";
