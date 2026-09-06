@@ -16,9 +16,7 @@ rustPlatform.buildRustPackage {
     hash = lib.fakeHash;
   };
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-  };
+  cargoHash = lib.fakeHash;
 
   meta = {
     homepage = "https://github.com/leboiko/markdown-reader";
