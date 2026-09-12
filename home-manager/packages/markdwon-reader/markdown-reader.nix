@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage {
     hash = "sha256-x5aobkVwfXEi71kB6utwyIXrSXRSYTGqqf4ZxKSEpxI";
   };
 
-  cargoHash = lib.fakeHash;
+  cargoHash = "sha256-Ujck42v7CPW2mT5Sa8LKwFc8sHOF8XFl0l68gUmQbw8";
 
   meta = {
     homepage = "https://github.com/leboiko/markdown-reader";
