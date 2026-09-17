@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.*
+*.secret
+*.secrets
+secrets/
+private/
+
+# SSH
+.ssh/
+**/id_rsa
+**/id_ed25519
+**/*.pem
+**/*.key
+
+# Credentials / tokens
+**/credentials*
+**/*token*
+**/*secret*
+
+# Machine-local files
+.local/
+.cache/
